@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import { Fragment, useState } from "react";
+import HookEffect from "./hook/HookEffect";
+import HookRef from "./hook/HookRef";
+import HookQ from "./hook/HookQ";
+import HookReducer from "./hook/HookReducer";
 
-function App() {
+function App () {
+//보이기 숨기기 - unmount값 확이
+  const [visible, setVisible] = useState(true);
+
+  const handleVisible = () => {
+    setVisible(!visible);
+  }
+  console.log(visible)
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Fragment>
+
+      <button onClick={handleVisible}>{visible ? '숨기기' : '보이기' }</button>
+      {visible ? <HookEffect/>: null}
+
+    <hr/>
+    <HookRef/>
+
+    <hr/>
+    <HookQ/>
+
+    <hr/>
+    <HookReducer/>
+
+    </Fragment>
+  )
 }
 
 export default App;
