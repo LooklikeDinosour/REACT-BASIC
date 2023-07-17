@@ -6,7 +6,7 @@ function EventComponent2 () {
   //state 여러개를 객체로 관리하기
   const [form,setForm] = useState({name: '',
                                   topic: ''
-                                });
+                                  });
 
   const handleChange = (e) => {
     //console.log(e.target.name);

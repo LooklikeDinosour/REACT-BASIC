@@ -10,7 +10,7 @@ function App() {
 
     <div>나의 새로운 컴포넌트</div>
 
-    <MyComponent name={'홍길동'} age={20}  email={'상위@naver.com'}/>
+    <MyComponent name={'홍길동'} age={20} email={'상위@naver.com'}/>
     <MyComponent name={'이순신'} age={30} addr={'경기도'} />
 
     <MyComponent2 name={'신사임당'} age={40}/>
